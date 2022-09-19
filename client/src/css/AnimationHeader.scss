@@ -1,0 +1,16 @@
+
+.fade-in{
+  transition: all 500ms ease-in-out;
+  opacity: 1;
+  top:0px;
+
+}
+.fade-out{
+  transition: all 500ms ease-in-out;
+  opacity: 0;
+  top:300px;
+  pointer-events: none;
+  backdrop-filter: blur(38px);
+}
+
+

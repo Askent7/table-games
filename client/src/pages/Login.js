@@ -31,8 +31,10 @@ const Login = observer(() => {
             let data;
             data = await login(email, password);
             user.setUser(user)
-            user.setIsAuth(true)
+            user.setIsAuth(true);
+
             navigate(TABLE_ROUTE)
+
 
 
         } catch (e){

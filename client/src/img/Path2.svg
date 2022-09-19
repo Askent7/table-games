@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="105.948" height="114.007" viewBox="0 0 105.948 114.007">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.103" x2="0.632" y2="1.069" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a1dbd8"/>
+      <stop offset="1" stop-color="#205986"/>
+    </linearGradient>
+    <filter id="Path_2" x="0" y="0" width="105.948" height="114.007" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur"/>
+      <feFlood flood-color="#fff" flood-opacity="0.251" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g data-type="innerShadowGroup">
+    <path id="Path_2-2" data-name="Path 2" d="M279.644,132.935c16.491-1.283,28.316,14.84,39.1,27.384,9.725,11.316,17.69,24.181,18.041,39.1.359,15.261-4.213,31.475-16.156,40.982-11.177,8.9-26.869,6.727-40.982,4.505-11.533-1.816-21.3-7.689-29.833-15.655-8.949-8.351-18.214-17.613-18.913-29.833-.728-12.725,7.756-23.175,15.293-33.454,9.633-13.137,17.213-31.765,33.454-33.028" transform="translate(-230.854 -132.863)" fill="url(#linear-gradient)" style="mix-blend-mode: lighten;isolation: isolate"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2)" style="mix-blend-mode: lighten;isolation: isolate">
+      <path id="Path_2-3" data-name="Path 2" d="M279.644,132.935c16.491-1.283,28.316,14.84,39.1,27.384,9.725,11.316,17.69,24.181,18.041,39.1.359,15.261-4.213,31.475-16.156,40.982-11.177,8.9-26.869,6.727-40.982,4.505-11.533-1.816-21.3-7.689-29.833-15.655-8.949-8.351-18.214-17.613-18.913-29.833-.728-12.725,7.756-23.175,15.293-33.454,9.633-13.137,17.213-31.765,33.454-33.028" transform="translate(-230.85 -132.86)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

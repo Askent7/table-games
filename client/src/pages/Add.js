@@ -42,6 +42,14 @@ const optionsPlayers = [
     { label: '1-2', id:1},
     { label: '2-4', id:2},
     { label: '4-8', id:3},
+    {label: '1-4', id:4},
+    {label: '1-5', id:5},
+    {label: '1-6', id:6},
+    {label: '2-5', id:7},
+    {label: '2-6', id:8},
+    {label: '4-6', id:9},
+    {label: '2-12', id:10},
+    {label: '4-12', id:11},
 ]
 
 const optionsTime = [

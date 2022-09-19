@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "BreakPoints";
+
+
+body{
+
+
+
+  .vis{
+    opacity: 1;
+    pointer-events: all;
+
+  }
+  .not_vis{
+    opacity: 0;
+    visibility: hidden;
+  }
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  .Banner{
+    top: 0px;
+    left: 0px;
+    background: url(../img/1081835.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: grid;
+    align-items: center;
+
+    .Banner-Glass{
+      background: #20202060;
+      width: 50vw;
+      height: 100%;
+      opacity: 1;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      z-index: 1;
+    }
+    .Banner-Container{
+
+      display: block;
+      left:7vw;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .Banner-Name {
+      @include media(">=LGdesktop", ">desktop"){
+        font-size: 65px;
+      }
+      @include media('<LGdesktop','>=desktop'){
+        font-size: 46px;
+      }
+      @include media('<desktop', '>=tablet'){
+        font-size: 35px;
+      }
+
+      text-align: left;
+      font-family: Montserrat;
+      font-weight: 700;
+
+      letter-spacing: 1.32px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      cursor: default;
+
+    }
+    .Banner-Sub-Name{
+      @include media(">=LGdesktop", ">desktop"){
+        font-size: 26px;
+      }
+      @include media('<LGdesktop','>=desktop'){
+        font-size: 20px;
+      }
+      @include media('<desktop', '>=tablet'){
+        font-size: 16px;
+      }
+      text-align: left;
+      font: normal normal bold 26px/32px Montserrat;
+      letter-spacing: 0.52px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      margin-top: -7px;
+      cursor: default;
+    }
+    .Banner-text {
+      @include media(">=LGdesktop", ">desktop"){
+        font-size: 16px;
+      }
+      @include media('<LGdesktop','>=desktop'){
+        font-size: 12px;
+      }
+      @include media('<desktop', '>=tablet'){
+        font-size: 10px;
+      }
+      text-align: left;
+      font: 16px/25px Montserrat;
+      font-weight: 500;
+      letter-spacing: 0.50px;
+      line-height: 2;
+      color: #FFFFFF;
+      opacity: 1;
+      width: 25vw;
+      padding-top: 6vh;
+      cursor: default;
+    }
+
+
+    .Banner-Button{
+      @include media(">=LGdesktop", ">desktop"){
+        font-size: 25px;
+      }
+      @include media('<LGdesktop','>=desktop'){
+        font-size: 20px;
+      }
+      @include media('<desktop', '>=tablet'){
+        font-size: 16px;
+      }
+      background: transparent linear-gradient(122deg, rgba(165,220,215,0.60) 0%, rgba(15,66,120,0.60) 150%) 0% 0% no-repeat padding-box;
+      box-shadow: inset 0px 0px 20px #FFFFFF29;
+      border: 1px solid #FFFFFF80;
+      border-radius: 27px;
+      margin-top: 7vh;
+      width: 35vh;
+      height: 10vh;
+      text-align: center;
+      font: normal normal 600 25px Montserrat;
+      letter-spacing: 0.25vw;
+      color: #FFFFFF;
+      opacity: 1;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      text-transform: uppercase;
+      transition: all 0.5s ease-in-out;
+    }
+    .Banner-Button:hover{
+      backdrop-filter: blur(30px) brightness(1.8);
+      -webkit-backdrop-filter: blur(30px) brightness(1.8);
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .Banner-Blob{
+      @include media(">=LGdesktop", ">desktop"){
+        transform: scale(0.85);
+        top:4vh;
+        left:2vw;
+      }
+      @include media('<LGdesktop','>=desktop'){
+        transform: scale(0.5);
+        top:1vh;
+        left:1vw;
+      }
+      @include media('<desktop', '>=tablet'){
+        transform: scale(0.35);
+        top:3vh;
+        left:0.5vw;
+      }
+
+      position: absolute;
+      mix-blend-mode: screen;
+      mask-image: url("../img/Path1.svg");
+      backdrop-filter: blur(8px) brightness(1.1);
+      overflow: hidden;
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 3;
+      opacity: 1;
+      pointer-events: none;
+
+    }
+
+    .Banner-Blob2{
+      @include media(">=LGdesktop", ">desktop"){
+        transform: scale(1);
+        top:50vh;
+        left:22vw;
+      }
+      @include media('<LGdesktop','>=desktop'){
+        transform: scale(0.5);
+        top:50vh;
+        left:20vw;
+      }
+      @include media('<desktop', '>=tablet'){
+        transform: scale(0.5);
+        top:47vh;
+        left:22vw;
+      }
+
+      position: absolute;
+      mix-blend-mode: screen;
+      mask-image: url("../img/Path2.svg");
+      backdrop-filter: blur(8px) brightness(1.1);
+      overflow: hidden;
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 3;
+      opacity: 1;
+      pointer-events: none;
+
+    }
+
+
+  }
+  .Container{
+    display: block;
+    left: 0;
+    top: 80vh;
+    width: 100%;
+    height: 100%;
+    background: transparent linear-gradient(161deg, #8DC8C8 20%, #CBDFE9 150%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    align-content: center;
+    padding-top: 13vh;
+
+    
+    .Container-Headlines{
+      display: block;
+      text-align: center;
+      position: relative;
+      height: fit-content;
+      margin-top: 5%;
+    }
+    .Container-Headlines-Name{
+      @include media(">=LGdesktop", ">desktop"){
+        font-size: 25px;
+      }
+      @include media('<LGdesktop','>=desktop'){
+        font-size: 20px;
+      }
+      @include media('<desktop', '>=tablet'){
+        font-size: 16px;
+      }
+      display: block;
+      position: relative;
+      font: normal 700 30px/25px Montserrat;
+      letter-spacing: 4.5px;
+      color: #000000;
+      text-transform: uppercase;
+      opacity: 1;
+      z-index: 2;
+      cursor: default;
+    }
+    .Container-UnderText{
+      @include media('<desktop', '>=tablet'){
+        transform: scale(0.8);
+      }
+
+      display: block;
+      position: relative;
+      border: 1.2px solid #000000;
+      background-color: black;
+      opacity: 1;
+      width: 7%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 14px;
+      z-index: 2;
+
+    }
+
+    #UnderTextPopular{
+      width: 11%;
+
+    }
+
+    #UnderTextWe{
+      width: 8%;
+    }
+    .Container-Blob3{
+
+      @include media(">=LGdesktop", ">desktop"){
+
+      }
+      @include media('<LGdesktop','>=desktop'){
+        transform: scale(0.85);
+
+      }
+      @include media('<desktop', '>=tablet'){
+        transform: scale(0.75);
+      }
+
+      position: relative;
+      top: -100px;
+      mix-blend-mode: screen;
+      mask-image: url("../img/Path3.svg");
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1;
+      opacity: 1;
+      pointer-events: none;
+
+    }
+
+    .Container-Blob4{
+      @include media(">=LGdesktop", ">desktop"){
+
+      }
+      @include media('<LGdesktop','>=desktop'){
+        transform: scale(0.8);
+      }
+      @include media('<desktop', '>=tablet'){
+        transform: scale(0.75);
+      }
+      position: relative;
+      top: -125px;
+      mix-blend-mode: normal;
+      filter: brightness(0.99);
+      mask-image: url("../img/Path4.svg");
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1;
+      opacity: 0.7;
+      pointer-events: none;
+
+
+    }
+
+    .Container-Blob5{
+      @include media(">=LGdesktop", ">desktop"){
+        transform: scale(0.85);
+      }
+      @include media('<LGdesktop','>=desktop'){
+        transform: scale(0.8);
+
+      }
+      @include media('<desktop', '>=tablet'){
+        transform: scale(0.6);
+      }
+
+      position: relative;
+      top: -100px;
+      mix-blend-mode: screen;
+      mask-image: url("../img/Path11.svg");
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1;
+      opacity: 0.5;
+      pointer-events: none;
+      filter: hue-rotate(-1.45turn) brightness(1.3);
+
+    }
+
+    .Container-Container{
+      .container_to_left{
+        opacity: 0;
+        transform: translateX(-3%);
+        transition: all .4s;
+      }
+      .container_to_right{
+        opacity: 0;
+        transform: translateX(3%);
+        transition: all .4s;
+      }
+      .container_normal{
+        opacity: 1;
+        transition: all .4s;
+      }
+      padding: 5%;
+      display: grid;
+      align-items: center;
+      width: 77vw;
+      position: relative;
+      height: fit-content;
+      top: -145px;
+      margin-left: auto;
+      margin-right: auto;
+      background: #00000027 0% 0% no-repeat padding-box;
+      opacity: 1;
+      box-shadow: inset 0px 0px 100px #00000010;
+      border-radius: 30px;
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+
+
+
+      .left-arrow-container{
+        @include media(">=LGdesktop", ">desktop"){
+          transform: scale(-1);
+          left: 70px;
+
+        }
+        @include media('<LGdesktop','>=desktop'){
+          transform: scale(-0.8);
+          left: 50px;
+        }
+        @include media('<desktop', '>=tablet'){
+          transform: scale(-0.75);
+          left: 40px;
+        }
+        z-index: 5;
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        pointer-events: all;
+
+      }
+      .right-arrow-container{
+
+        @include media(">=LGdesktop", ">desktop"){
+          transform: scale(1);
+          right: 70px;
+
+        }
+        @include media('<LGdesktop','>=desktop'){
+          transform: scale(0.8);
+          right: 50px;
+        }
+        @include media('<desktop', '>=tablet'){
+          transform: scale(0.75);
+          right: 40px;
+        }
+
+        z-index: 3;
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        pointer-events: all;
+      }
+
+      .Container-for-list{
+
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2.5%;
+        width: 100%;
+        align-content: center;
+        .list-container:hover{
+          transform: scale(1.1);
+          filter: brightness(1.1);
+          cursor: pointer;
+        }
+        .list-container {
+          img{
+            mix-blend-mode: multiply;
+          }
+          z-index: 50;
+          transition: all 0.4s ease-in-out;
+          position: relative;
+          display: inline-grid;
+          background: #a8dadc 0% 0% no-repeat padding-box;
+          box-shadow: inset 0px 3px 20px #FFFFFF4D, 0px 3px 30px #00000010;
+          border: 1px solid #FFFFFF;
+          border-radius: 30px;
+          opacity: 1;
+          backdrop-filter: blur(18px);
+          -webkit-backdrop-filter: blur(18px);
+          height: 13vw;
+          width: 12vw;
+          margin-left: 3%;
+          margin-right: 3%;
+          margin-bottom: 5%;
+          margin-top: 5%;
+
+          .list-container-img-shadow{
+            filter: drop-shadow(0px 3px 15px #4040404D);
+
+          }
+
+          .list-container-img {
+
+            @include media(">=LGdesktop", ">desktop"){
+              margin-top: -8vh;
+            }
+            @include media('<LGdesktop','>=desktop'){
+              margin-top: -8vh;
+            }
+            @include media('<desktop', '>=tablet'){
+              margin-top: -6.5vh;
+            }
+            display: block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            clip-path: circle(3.5vw at center);
+            height: 7vw;
+            width: 7vw;
+            margin-left: auto;
+            margin-right: auto;
+            mix-blend-mode: multiply;
+
+
+          }
+
+
+          .list-container-name {
+            @include media(">=LGdesktop", ">desktop"){
+              font-size: 14px;
+            }
+            @include media('<LGdesktop','>=desktop'){
+              font-size: 12px;
+            }
+            @include media('<desktop', '>=tablet'){
+              font-size: 10px;
+            }
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            top: 35%;
+            margin-bottom: 2%;
+            width: 90%;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            font: normal normal 600 16px/16px Montserrat;
+
+            letter-spacing: 0.9px;
+            color: #000000;
+            opacity: 1;
+
+          }
+
+          .list-container-sub-name {
+            @include media(">=LGdesktop", ">desktop"){
+              font-size: 12px;
+            }
+            @include media('<LGdesktop','>=desktop'){
+              font-size: 10px;
+            }
+            @include media('<desktop', '>=tablet'){
+              font-size: 10px;
+            }
+            top: 55%;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            width: 80%;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            font: normal normal 500 14px Montserrat;
+            letter-spacing: 0.75px;
+            color: #000000;
+            opacity: 1;
+            margin-bottom: 30%;
+          }
+
+          .list-container-price {
+            @include media(">=LGdesktop", ">desktop"){
+              font-size: 16px;
+
+            }
+            @include media('<LGdesktop','>=desktop'){
+              font-size: 12px;
+
+            }
+            @include media('<desktop', '>=tablet'){
+              font-size: 10px;
+
+            }
+            height: fit-content;
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            font: normal normal bold 16px/25px Montserrat;
+
+            letter-spacing: 0.9px;
+            color: #000000;
+            opacity: 1;
+
+          }
+
+
+
+          }
+        .list-container-why-we {
+          transition: all 0.4s ease-in-out;
+          position: relative;
+          display: inline-grid;
+
+          background: #a8dadc 0% 0% no-repeat padding-box;
+          box-shadow: inset 0px 3px 20px #FFFFFF4D, 0px 3px 30px #00000010;
+          border: 1px solid #FFFFFF;
+          border-radius: 30px;
+          opacity: 1;
+          backdrop-filter: blur(18px);
+          -webkit-backdrop-filter: blur(18px);
+          height: 16vw;
+          width: 12vw;
+          margin-left: 3%;
+          margin-right: 3%;
+
+
+          .list-container-why-we-img{
+            @include media(">=LGdesktop", ">desktop"){
+              margin-top: 3vh;
+              transform: scale(0.8);
+            }
+            @include media('<LGdesktop','>=desktop'){
+              margin-top: 2.5vh;
+              transform: scale(0.72);
+
+            }
+            @include media('<desktop', '>=tablet'){
+              margin-top: 2vh;
+              transform: scale(0.7);
+            }
+            display: block;
+            margin-bottom: -10%;
+            opacity: 1;
+            margin-left: auto;
+            margin-right: auto;
+            height: 6vw;
+            width: 6vw;
+
+
+          }
+
+          .list-container-why-we-name{
+            @include media(">=LGdesktop", ">desktop"){
+              font-size: 18px;
+            }
+            @include media('<LGdesktop','>=desktop'){
+              font-size: 14px;
+            }
+            @include media('<desktop', '>=tablet'){
+              font-size: 10px;
+            }
+
+            margin-bottom: -10%;
+            width: 85%;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            font: normal normal bold 22px Montserrat;
+            letter-spacing: 0.44px;
+            line-height: 1;
+            color: #000000;
+            opacity:1;
+            cursor: default;
+
+          }
+
+          .list-container-why-we-sub-name{
+            @include media(">=LGdesktop", ">desktop"){
+              font-size: 14px;
+              margin-top: 0%;
+            }
+            @include media('<LGdesktop','>=desktop'){
+              font-size: 10px;
+            }
+            @include media('<desktop', '>=tablet'){
+              font-size: 8px;
+
+            }
+            width: 70%;
+            margin-top: -5%;
+            text-align:  center;
+            margin-right: auto;
+            margin-left: auto;
+            font: normal normal 500 14px Montserrat;
+            letter-spacing: 0.28px;
+            color: #000000;
+            opacity: 1;
+            line-height: 1.3;
+            cursor: default;
+
+          }
+
+        }
+      }
+
+    }
+    #Shirok{
+      margin-bottom: -13%;
+    }
+
+    #Popular{
+      top: -243px;
+    }
+    #We{
+      top: -160px;
+    }
+  }
+
+}

@@ -11,7 +11,7 @@ import { styled } from '@mui/material/styles';
 import {observer} from "mobx-react-lite";
 import {useContext, useEffect, useState} from "react";
 import {Context} from "../index";
-import {deleteGame, fetchCategory, fetchGame} from "../http/gameAPI";
+import {deleteGame, fetchCategory, fetchAllGame} from "../http/gameAPI";
 import * as React from "react";
 import {Table} from "@mui/material";
 import {get, values, keys, has} from "mobx"
@@ -124,7 +124,7 @@ const TableShow = observer(() => {
         fetchCategory().then(data => game.setCategories(data))
         setTimeout(() => {
         }, 700)
-        fetchGame().then(data => game.setGames(data.rows))
+        fetchAllGame().then(data => game.setGames(data.rows))
 
     }, [])
 
@@ -146,7 +146,7 @@ const TableShow = observer(() => {
     function deleteGa(id){
         deleteGame(id);
 
-        setTimeout(()=>{ fetchGame().then(data => game.setGames(data.rows))}, 100)
+        setTimeout(()=>{ fetchAllGame().then(data => game.setGames(data.rows))}, 100)
 
 
     }

@@ -17,7 +17,7 @@ export const Context = createContext(null)
 
 
 ReactDOM.render(
-    <Context.Provider value={{user: new UserStore(), game: new gameStorage(),}}>
+    <Context.Provider value={{user: new UserStore(), game: new gameStorage(), popular: new gameStorage(), search: new gameStorage(), category: new gameStorage()}}>
         <App/>
     </Context.Provider>,
   document.getElementById('root')

@@ -12,7 +12,7 @@ const AppRouter = () => {
             <Routes>
                 {user.isAuth && authRoutes.map(({path, component}) => <Route key={path} path={path} element={component} exact></Route>)}
                 {publicRoutes.map(({path, component}) => <Route key={path} path={path} element={component} exact></Route>)}
-                {authRoutes.map(({path}) => <Route path={path} element={<Navigate to="/" replace/>} ></Route>)}
+                {authRoutes.map(({path}) => <Route path={path} element={<Navigate to="/Admin" replace/>} ></Route>)}
                 <Route path="*" element={<Not404/>}/>
             </Routes>
 

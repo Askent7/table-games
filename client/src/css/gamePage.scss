@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "BreakPoints";
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+.paging{
+  background-color: #CBDFE9;
+  opacity: 0.6;
+  display: inline-block;
+  width: 15px;
+  height: 3px;
+  margin: 2px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  transition: all .5s;
+  pointer-events: all;
+}
+.active{
+  opacity: 1 !important;
+  height: 5px !important;
+  transition: all .5s;
+}
+
+
+.left-arrow-container{
+  @include media(">=LGdesktop", ">desktop"){
+    transform: scale(-1);
+    left: 20px;
+
+  }
+  @include media('<LGdesktop','>=desktop'){
+    transform: scale(-0.8);
+    left: 20px;
+  }
+  @include media('<desktop', '>=tablet'){
+    transform: scale(-0.75);
+    left: 20px;
+  }
+  z-index: 5;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  pointer-events: all;
+  filter: brightness(.85);
+}
+.right-arrow-container{
+
+  @include media(">=LGdesktop", ">desktop"){
+    transform: scale(1);
+    right: 20px;
+
+  }
+  @include media('<LGdesktop','>=desktop'){
+    transform: scale(0.8);
+    right: 20px;
+  }
+  @include media('<desktop', '>=tablet'){
+    transform: scale(0.75);
+    right: 20px;
+  }
+
+  z-index: 3;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  pointer-events: all;
+  filter: brightness(.85);
+}
+
+body{
+  .container-img{
+    object-fit: cover;
+
+  }
+  .fit{
+    object-fit: contain;
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+  }
+  .game-img-container{
+    display: inline-block;
+    width: 100%;
+    box-shadow: inset 0px 0px 50px #FFFFFF85;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 5;
+    background-color: white;
+  }
+  .game-img-container-2{
+    height: 45vh;
+    object-fit: cover;
+
+  }
+
+
+  .Container {
+
+
+    .breadcrumbs {
+      margin-left: 7%;
+
+      .breadcrumbsLink {
+        text-decoration: none;
+        color: #4B4B4B;
+
+      }
+
+      .breadcrumbsName {
+        color: #111111;
+      }
+    }
+
+    .Container-game {
+      display: block;
+      background: #00000027 0% 0% no-repeat padding-box;
+      box-shadow: inset 0px 0px 50px #00000005;
+      border-radius: 30px;
+      opacity: 1;
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      padding: 3%;
+      margin: 2% 6.5% 2% 6.5%;
+      width: fit-content;
+      .Container-game-name::before{
+        height: 100%;
+        content: '';
+        display: inline-grid;
+        vertical-align: middle;
+
+      }
+      .Container-game-name {
+        margin-right: 5vh;
+        padding: 0;
+        height: 7vh;
+        display: inline-block;
+        width: 100%;
+        background: #a8dadc 0% 0% no-repeat padding-box;
+        box-shadow: inset 0px 3px 20px #FFFFFF4D, 0px 3px 30px #0000004D;
+        border: 1px solid #FFFFFF;
+        border-radius: 20px;
+        opacity: 1;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+
+
+        .container-game-name-ver{
+          display: inline-grid;
+          margin-left: 3%;
+
+
+          .game-name {
+
+            text-align: left;
+            font: normal normal bold 26px/0px Montserrat;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+            margin-bottom: 12px;
+          }
+          .game-little-description {
+            text-align: left;
+            font: normal normal medium 14px/10px Montserrat;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+          }
+        }
+
+      }
+      .Container-game-params::before{
+        content: '';
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+
+      }
+      .Container-game-params {
+        padding: 0;
+        height: 7vh;
+        display: inline-block;
+        width: 100%;
+        background: #a8dadc 0% 0% no-repeat padding-box;
+        box-shadow: inset 0px 3px 20px #FFFFFF4D, 0px 3px 30px #0000004D;
+        border: 1px solid #FFFFFF;
+        border-radius: 20px;
+        opacity: 1;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        .Container-con-game-params::before{
+          height: 100%;
+          content: '';
+          display: inline-block;
+          vertical-align: center;
+        }
+        .Container-con-game-params{
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          display: inline-flex;
+          align-items: center;
+          flex-flow: row;
+          justify-content: center;
+          align-content: center;
+          justify-self: center;
+        }
+
+        .game-params-icon{
+
+          display: inline-block;
+          margin-right: 3%;
+
+
+        }
+        .game-age-rating {
+          display: inline-block;
+          text-align: left;
+          font: normal normal 600 28px/10px Montserrat;
+          letter-spacing: 0px;
+          color: #000000;
+          opacity: 1;
+          margin-right: 7%;
+
+        }
+
+        .game-player-number {
+
+          display: inline-block;
+          text-align: left;
+          font: normal normal medium 14px/0px Montserrat;
+          letter-spacing: 0px;
+          color: #000000;
+          opacity: 1;
+          position: relative;
+          align-content: center;
+          margin-right: 7%;
+
+        }
+        .game-time{
+
+
+          display: inline-block;
+          text-align: left;
+          font: normal normal medium 14px/0px Montserrat;
+          letter-spacing: 0px;
+          color: #000000;
+          opacity: 1;
+          position: relative;
+          align-content: center;
+        }
+
+      }
+
+      .Container-game-descriptions {
+        display: inline-block;
+        width: 100%;
+        padding: 2%;
+        margin-top: 5vh;
+        margin-right: 5vh;
+
+        background: #a8dadc 0% 0% no-repeat padding-box;
+        box-shadow: inset 0px 3px 20px #FFFFFF4D, 0px 3px 30px #0000004D;
+        border: 1px solid #FFFFFF;
+        border-radius: 20px;
+        opacity: 1;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        .game-img-container {
+
+        }
+        .game-des-container{
+          display: inline-block;
+          width: 100%;
+        }
+        .game-des {
+          text-align: left;
+          font: normal normal 600 24px/10px Montserrat;
+          letter-spacing: 0px;
+          color: #4B4B4B;
+          opacity: 1;
+          margin-top: 3%;
+          margin-bottom: 2%;
+        }
+
+        .game-description {
+          text-align: left;
+          font: normal normal normal 14px/20px Montserrat !important;
+          letter-spacing: 0px;
+          color: #000000;
+          opacity: 1;
+        }
+
+
+      }
+
+      .Container-game-price {
+        display: inline-block;
+        width: 100%;
+        margin-top: 5vh;
+        vertical-align: top;
+        height: fit-content;
+
+        background: #a8dadc 0% 0% no-repeat padding-box;
+        box-shadow: inset 0px 3px 20px #FFFFFF4D, 0px 3px 30px #0000004D;
+        border: 1px solid #FFFFFF;
+        border-radius: 20px;
+        opacity: 1;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+
+
+        .game-id {
+          text-align: left;
+          font: normal normal normal 8px/10px Montserrat;
+          letter-spacing: 0px;
+          color: #4B4B4B;
+          opacity: 1;
+          float: right;
+          margin-right: 15%;
+          margin-top: 10%;
+        }
+
+        .game-price-container {
+          margin-top: 20%;
+          width: 100%;
+          margin-left: 15%;
+          margin-bottom: 15%;
+          .game-price {
+            text-align: left;
+            font: normal normal 600 32px/10px Montserrat;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+            display: inline-block;
+            margin-right: 3%;
+          }
+
+          .game-rub {
+            text-align: left;
+            font: normal normal 600 16px/10px Montserrat;
+            letter-spacing: 0px;
+            color: #4B4B4B;
+            opacity: 1;
+            display: inline-block;
+          }
+
+        }
+        .game-dropbus-button::before{
+          content: '';
+          height: 100%;
+          vertical-align: middle;
+          display: inline-block;
+        }
+        .game-dropbus-button {
+          @include media(">=LGdesktop", ">desktop") {
+            font-size: 25px;
+          }
+          @include media('<LGdesktop', '>=desktop') {
+            font-size: 20px;
+          }
+          @include media('<desktop', '>=tablet') {
+            font-size: 16px;
+          }
+
+          background: transparent linear-gradient(122deg, rgba(165, 220, 215, 0.60) 0%, rgba(15, 66, 120, 0.6) 150%) 0% 0% no-repeat padding-box;
+          box-shadow: inset 0px 0px 20px #FFFFFF29;
+          border: 1px solid #FFFFFF80;
+          border-radius: 27px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 24vh;
+          height: 6vh;
+          text-align: center;
+          display: block;
+          vertical-align: middle;
+          font: normal normal 600 25px Montserrat;
+          letter-spacing: 0.25vw;
+          color: #FFFFFF;
+          opacity: 1;
+          backdrop-filter: blur(18px);
+          -webkit-backdrop-filter: blur(18px);
+          text-transform: uppercase;
+          transition: all 0.5s ease-in-out;
+
+        }
+
+        .game-dropbus-button:hover {
+          backdrop-filter: blur(30px) brightness(1.8);
+          -webkit-backdrop-filter: blur(30px) brightness(1.8);
+          transform: scale(1.05);
+          cursor: pointer;
+        }
+
+        .game-delivery {
+          margin-left: 15%;
+          margin-top: 10%;
+          text-align: left;
+          font: normal normal normal 10px/25px Montserrat;
+          letter-spacing: 0px;
+          color: #4B4B4B;
+          opacity: 1;
+          margin-bottom: 15%;
+        }
+
+      }
+      .Container-game-rule:hover{
+        filter: brightness(1.1);
+        transform: scale(1.05);
+        transition: all .5s;
+      }
+      .Container-game-rule {
+        transition: all .5s;
+        display: flex;
+        align-items: center;
+        vertical-align: center;
+        margin-right: 0%;
+        height: 7vh;
+        background: #a8dadc 0% 0% no-repeat padding-box;
+        box-shadow: inset 0px 3px 20px #FFFFFF4D, 0px 3px 30px #0000004D;
+        border: 1px solid #FFFFFF;
+        border-radius: 20px;
+        opacity: 1;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        margin-top: 5vh;
+
+        .game-rule{
+          display: flex;
+          margin-right: auto;
+          margin-left: auto;
+          text-decoration: none;
+          text-align: center;
+          font: normal normal 600 15px/18px Montserrat;
+          letter-spacing: 2.25px;
+          color: #101010;
+          text-transform: uppercase;
+          opacity: 1;
+        }
+
+      }
+
+    }
+  }
+}
+
+.ver-al{
+  vertical-align: top;
+}

@@ -1,0 +1,149 @@
+@import "./BreakPoints";
+
+body{
+  .Footer{
+    display: block;
+    position: relative;
+    height: 40vh;
+    background: #10101057 0% 0% no-repeat padding-box;
+    box-shadow: inset 0px 3px 180px #00000027;
+    opacity: 1;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    .Footer-Cont{
+      @include media(">=LGdesktop", ">desktop"){
+        margin-top: 4%;
+      }
+      @include media('<LGdesktop','>=desktop'){
+        margin-top: 2%;
+      }
+      @include media('<desktop', '>=tablet'){
+        margin-top: 1%;
+      }
+        position: absolute;
+        display: block;
+
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        height: 70%;
+        margin-left: 12%;
+        margin-top: 4%;
+      .Cont-List{
+        display: inline-block;
+        position: relative;
+        width: 20%;
+      }
+    }
+
+  }
+
+  .List-Name{
+    @include media(">=LGdesktop", ">desktop"){
+      font-size: 16px;
+    }
+    @include media('<LGdesktop','>=desktop'){
+      font-size: 14px;
+    }
+    @include media('<desktop', '>=tablet'){
+      font-size: 12px;
+    }
+
+    font: normal normal 600 16px/25px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    cursor: default;
+  }
+
+  .List-Sub-Item{
+    @include media(">=LGdesktop", ">desktop"){
+      font-size: 14px;
+    }
+    @include media('<LGdesktop','>=desktop'){
+      font-size: 12px;
+    }
+    @include media('<desktop', '>=tablet'){
+      font-size: 10px;
+    }
+    text-align: left;
+    font: normal normal normal 14px/25px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+
+  }
+
+  .Copyright{
+    @include media(">=LGdesktop", ">desktop"){
+
+    }
+    @include media('<LGdesktop','>=desktop'){
+      width: 78%;
+      font-size: 10px;
+    }
+    @include media('<desktop', '>=tablet'){
+      width: 82%;
+      font-size: 8px;
+    }
+    text-align: left;
+    font: normal normal normal 12px Montserrat;
+    width: 65%;
+    line-height: 2;
+    margin-top: 2vh;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    cursor: default;
+  }
+
+  .Copy-Links{
+    @include media(">=LGdesktop", ">desktop"){
+      font-size: 12px;
+    }
+    @include media('<LGdesktop','>=desktop'){
+      font-size: 10px;
+    }
+    @include media('<desktop', '>=tablet'){
+      font-size: 8px;
+    }
+    float: left;
+    display: inline-block;
+    margin-top: 2vh;
+    margin-right:5% ;
+    text-align: left;
+    font: normal normal 300 12px/25px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    cursor: default;
+  }
+.Logo2{
+  float: left;
+  display: inline-block;
+
+
+  @include media(">=LGdesktop", ">desktop"){
+    transform: scale(0.8);
+    margin-left: -3%;
+  }
+  @include media('<LGdesktop','>=desktop'){
+    transform: scale(0.6);
+    margin-left: -9%;
+  }
+  @include media('<desktop', '>=tablet'){
+    transform: scale(0.6);
+    margin-left: -10%;
+  }
+  margin-top: 3vh;
+
+}
+.line{
+  width: 60%;
+  height: 1px;
+  background-color: #FFFFFF;
+  margin-top: 5vh;
+}
+
+}

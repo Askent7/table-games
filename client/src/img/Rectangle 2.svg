@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="285" height="89" viewBox="0 0 285 89">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.093" y1="-0.248" x2="1.059" y2="1.705" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a5dcd7"/>
+      <stop offset="1" stop-color="#0f4278"/>
+    </linearGradient>
+    <filter id="Rectangle_2">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#fff" flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g data-type="innerShadowGroup">
+    <rect id="Rectangle_2-2" data-name="Rectangle 2" width="285" height="89" rx="27" fill="url(#linear-gradient)"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_2)">
+      <rect id="Rectangle_2-3" data-name="Rectangle 2" width="285" height="89" rx="27" fill="#fff"/>
+    </g>
+    <g id="Rectangle_2-4" data-name="Rectangle 2" fill="none" stroke="rgba(255,255,255,0.5)" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1">
+      <rect width="285" height="89" rx="27" stroke="none"/>
+      <rect x="0.5" y="0.5" width="284" height="88" rx="26.5" fill="none"/>
+    </g>
+  </g>
+</svg>
